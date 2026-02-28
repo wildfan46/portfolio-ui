@@ -1,6 +1,6 @@
 # Portfolio UI
 
-![CI/CD](https://github.com/wildfan46/portfolio-ui/actions/workflows/deploy.yml/badge.svg)](https://github.com/wildfan46/portfolio-ui/actions/workflows/deploy.yml)
+[![CI/CD](https://github.com/wildfan46/portfolio-ui/actions/workflows/deploy.yml/badge.svg)](https://github.com/wildfan46/portfolio-ui/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. This is a sleek dashboard-style interface showcasing projects, experience, proficiencies, and tasks.
