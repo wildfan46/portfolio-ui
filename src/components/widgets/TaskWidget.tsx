@@ -9,7 +9,7 @@ const TaskWidget: React.FC = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
-    const API_URL = "https://api.austinluing.com/";
+    const API_URL = "https://api.austinluing.com";
 
     const refreshStats = async () => {
         try {
