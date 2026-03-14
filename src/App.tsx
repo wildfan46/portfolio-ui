@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Sidebar from './components/sidebar/Sidebar';
 import ProjectsWidget from './components/widgets/ProjectsWidget';
 import ExperienceWidget from "./components/widgets/ExperienceWidget.tsx";
-import TaskWidget from "./components/widgets/TaskWidget.tsx";
+import PrinciplesWidget from "./components/widgets/PrinciplesWidget.tsx";
 import ProficiencyWidget from "./components/widgets/ProficiencyWidget.tsx";
+import TodoistModal from "./components/modals/TodoistModal.tsx";
 
 const App: React.FC = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         /* Main Background Wrapper */
         <div className="min-h-screen p-4 lg:p-12">
@@ -16,7 +19,7 @@ const App: React.FC = () => {
 
                 {/* LEFT COLUMN (Sidebar)
             Occupies 3 columns out of 12 on desktop */}
-                <Sidebar />
+                <Sidebar onOpenModal={() => setIsModalOpen(true)} />
 
                 {/* RIGHT AREA (Dashboard)
             Occupies 9 columns out of 12 on desktop */}
@@ -29,7 +32,7 @@ const App: React.FC = () => {
 
                     {/* Top Right Widget */}
                     <section className="h-[300px] bg-[#161b22] border border-slate-800 rounded-3xl">
-                        <TaskWidget />
+                        <PrinciplesWidget />
                     </section>
 
                     {/* Bottom Middle Widget */}
@@ -43,6 +46,8 @@ const App: React.FC = () => {
                     </section>
 
                 </main>
+
+                {isModalOpen && <TodoistModal onClose={() => setIsModalOpen(false)} />}
             </div>
         </div>
     );

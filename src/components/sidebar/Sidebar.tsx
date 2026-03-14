@@ -1,7 +1,11 @@
 import React from 'react';
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, ListTodo } from 'lucide-react';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+    onOpenModal: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ onOpenModal }) => {
     return (
         <aside className="lg:col-span-3 h-full">
             <div className="bg-[#161b22] border border-slate-800 rounded-3xl p-8 h-full flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -35,6 +39,12 @@ const Sidebar: React.FC = () => {
                     <a href="mailto:wildfan46@gmail.com" className="p-2 bg-[#0d1117] border border-slate-800 rounded-lg text-slate-400 hover:text-blue-400 hover:border-blue-500/50 transition-all">
                         <Mail size={20} />
                     </a>
+                    <button
+                        onClick={onOpenModal}
+                        className="p-2 bg-[#0d1117] border border-slate-800 rounded-lg text-slate-400 hover:text-blue-400 hover:border-blue-500/50 transition-all"
+                        title="Add a task to my Todoist">
+                        <ListTodo size={20} />
+                    </button>
                 </div>
 
                 <div className="mt-auto pt-8 w-full">

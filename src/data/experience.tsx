@@ -1,6 +1,5 @@
 import type { Experience } from "../types";
 
-// TODO AL : Tweak descriptions and highlights
 export const experiences: Experience[] = [
     {
         company: "Capital One",
@@ -107,38 +106,3 @@ export const experiences: Experience[] = [
         ]
     }
 ];
-    // {
-    //     role: "Software Engineer",
-    //     company: "Capital One",
-    //     period: "2022 — Present",
-    //     description: "Leading frontend modernization and bridging the gap between legacy backend services and modern React architectures.",
-    //     highlights: ["Microservices", "Angular/TypeScript", "Python", "AWS"]
-    // },
-    // {
-    //     role: "Software Engineer",
-    //     company: "SPS Commerce",
-    //     period: "September 2020 — July 2022",
-    //     description: "Specialized in high-throughput API design and distributed systems. Focused on data integrity and system reliability.",
-    //     highlights: ["PostgreSQL", "System Design", "Node.js/Go"]
-    // },
-    // {
-    //     role: "Scrum Master",
-    //     company: "SPS Commerce",
-    //     period: "January 2022 — July 2022",
-    //     description: "Specialized in high-throughput API design and distributed systems. Focused on data integrity and system reliability.",
-    //     highlights: ["PostgreSQL", "System Design", "Node.js/Go"]
-    // },
-    // {
-    //     role: "Associate Software Engineer II",
-    //     company: "SPS Commerce",
-    //     period: "August 2019 — September 2020",
-    //     description: "Specialized in high-throughput API design and distributed systems. Focused on data integrity and system reliability.",
-    //     highlights: ["PostgreSQL", "System Design", "Node.js/Go"]
-    // },
-    // {
-    //     role: "Developer I",
-    //     company: "Menards",
-    //     period: "June 2018 — July 2019",
-    //     description: "Developed and maintained web application for estimating DIY and Commercial Landscaping Projects.",
-    //     highlights: ["Full Stack", "Angular", "Agile Workflow"]
-    // }

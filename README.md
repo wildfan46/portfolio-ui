@@ -30,7 +30,7 @@ Deployed on **[Fly.io](https://luing-ui.fly.dev)** with automatic HTTPS and alwa
   - Featured Projects with live GitHub links
   - Work Experience timeline
   - Technical Proficiencies
-  - Task integration with Todoist
+  - Engineering Principles display
 - **Performance**: Optimized with Vite for lightning-fast builds and dev server
 - **Type Safe**: Full TypeScript support for reliability
 - **Code Quality**: ESLint configuration for code consistency
@@ -68,15 +68,18 @@ Deployed on **[Fly.io](https://luing-ui.fly.dev)** with automatic HTTPS and alwa
 portfolio-ui/
 ├── src/
 │   ├── components/
+│   │   ├── modals/
+│   │   │   └── TodoistModal.tsx      # Modal for Todoist integration
 │   │   ├── sidebar/
 │   │   │   └── Sidebar.tsx           # Profile sidebar component
 │   │   └── widgets/
 │   │       ├── ExperienceWidget.tsx  # Work experience display
 │   │       ├── ProficiencyWidget.tsx # Technical skills display
 │   │       ├── ProjectsWidget.tsx    # Featured projects showcase
-│   │       └── TaskWidget.tsx        # Task/todo integration
+│   │       └── PrinciplesWidget.tsx  # Engineering principles
 │   ├── data/
 │   │   ├── experience.tsx            # Experience data
+│   │   ├── principles.tsx            # Principles data
 │   │   └── project.tsx               # Projects data
 │   ├── App.tsx                       # Main application component
 │   ├── App.css                       # Application styles
@@ -212,15 +215,19 @@ The application uses a responsive grid layout:
 
 ```
 App
+├── TodoistModal
 ├── Sidebar (Profile)
 └── Main Dashboard
     ├── ProficiencyWidget
-    ├── TaskWidget
+    ├── PrinciplesWidget
     ├── ProjectsWidget
     └── ExperienceWidget
 ```
 
 ## 📦 Components
+
+### TodoistModal
+Injects a Todoist task via a POST to the bff lambda. Located in `src/components/modal/TodoistModal.tsx`.
 
 ### Sidebar
 Displays profile information and navigation. Located in `src/components/sidebar/Sidebar.tsx`.
@@ -247,8 +254,10 @@ Data source: `src/data/experience.tsx`
 ### ProficiencyWidget
 Shows technical skills and proficiencies.
 
-### TaskWidget
-Integrates with task management system (Todoist).
+### PrinciplesWidget
+Shows engineering principles.
+
+Data source: `src/data/principles.tsx`
 
 ## 📝 Data Models
 
@@ -279,6 +288,16 @@ interface Role {
   date: string;
   impact: string;
   tags: string[];
+}
+```
+
+### Principle Interface
+
+```typescript
+interface Principle {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
 }
 ```
 

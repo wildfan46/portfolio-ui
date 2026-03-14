@@ -20,3 +20,9 @@ export interface Role {
     impact: string;
     tags: string[];
 }
+
+export interface Principle {
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+}
