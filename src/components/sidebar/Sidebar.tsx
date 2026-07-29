@@ -47,12 +47,12 @@ const Sidebar: React.FC<SidebarProps> = ({ onOpenModal }) => {
                     </button>
                 </div>
 
-                <div className="mt-auto pt-8 w-full">
-                    <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3 flex items-center gap-3">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-500">Available for new roles</span>
-                    </div>
-                </div>
+                {/*<div className="mt-auto pt-8 w-full">*/}
+                {/*    <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3 flex items-center gap-3">*/}
+                {/*        <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>*/}
+                {/*        <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-500">Available for new roles</span>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </aside>
     );

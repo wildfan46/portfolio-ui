@@ -1,6 +1,24 @@
 import type { Experience } from "../types";
 
 export const experiences: Experience[] = [
+    // TODO AL : Add this back in after onboarding
+    // {
+    //     company: "Morgan Stanley",
+    //     location: "Minneapolis, MN",
+    //     roles: [
+    //         {
+    //             title: "Senior Software Engineer",
+    //             team: "Parametric Portfolio Management",
+    //             date: "2026 - Present",
+    //             impact: "Maintained trading tools used by portfolio managers at Parametric",
+    //             tags: [
+    //                 "Java",
+    //                 "AWS",
+    //                 "Agile"
+    //             ]
+    //         }
+    //     ]
+    // },
     {
         company: "Capital One",
         location: "Remote",
@@ -8,7 +26,7 @@ export const experiences: Experience[] = [
             {
                 title: "Software Engineer",
                 team: "Expense Management",
-                date: "2025 - Present",
+                date: "2025 - 2026",
                 impact: "Modernized and maintained a full stack application used by 1000+ customers weekly to manage their business expenses",
                 tags: [
                     "Python",
